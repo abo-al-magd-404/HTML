@@ -1,0 +1,1651 @@
+<!-- 
+📘 HTML MASTER REFERENCE - SECTION 1
+Page Structure, DOCTYPE, and Rendering Modes
+This section includes the starting boilerplate of any HTML file
+-->
+
+<!DOCTYPE html>
+<!-- 
+  DOCTYPE declaration ensures the browser uses Standard Mode, 
+  not Quirks Mode (which simulates old browser behavior).
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Master Reference</title>
+
+    <!-- 
+      🧠 The <head> section contains metadata, title, 
+      links to CSS files, fonts, scripts, etc.
+      Its content is not visible in the page body.
+    -->
+
+    <style>
+      /* 🎨 Basic internal styling for educational readability only */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        background-color: #fdfdfd;
+        color: #222;
+      }
+      h1, h2, h3 {
+        color: #2c3e50;
+      }
+      code, pre {
+        background: #f4f4f4;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-family: monospace;
+      }
+      pre {
+        overflow-x: auto;
+      }
+      hr {
+        margin: 3rem 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      a {
+        color: #2c3e50;
+      }
+    </style>
+  </head>
+
+  <body>
+      <!-- 
+        👁️ The <body> contains all visible content on the page 
+        including headings, text, images, links, forms, and media.
+      -->
+
+      <h1>📘 HTML Master Reference</h1>
+      <p>This page is a complete reference for learning HTML — from absolute basics to advanced topics.</p>
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 2
+      Introduction & What You Need to Learn
+      This section introduces what HTML is, and how to begin learning it
+      -->
+
+      <h2>🚀 Introduction & What You Need to Learn</h2>
+
+      <p>
+        HTML stands for <strong>HyperText Markup Language</strong>. It is the core building block of the web, used to structure and present content in browsers.
+      </p>
+
+      <ul>
+        <li>🧠 HTML is a <strong>markup language</strong>, not a programming language.</li>
+        <li>🏗️ It defines the structure of web pages using elements called <code>tags</code>.</li>
+        <li>🌐 HTML elements represent text, links, images, multimedia, forms, and layout blocks.</li>
+      </ul>
+
+      <h3>🎯 What You Will Learn</h3>
+      <ul>
+        <li>Basic structure of an HTML document</li>
+        <li>Using tags, attributes, and elements</li>
+        <li>Working with text, lists, links, images, and tables</li>
+        <li>Creating forms and interactive elements</li>
+        <li>Building semantic, accessible, and responsive layouts</li>
+      </ul>
+
+      <h3>📚 Recommended Learning Resources:</h3>
+      <ul>
+        <li><a href="https://elzero.org/study/html-2021-study-plan/" target="_blank">Elzero HTML Study Plan</a></li>
+        <li><a href="https://youtube.com/playlist?list=PLDoPjvoNmBAw_t_XWUFbBX-c9MafPk9ji" target="_blank">Elzero HTML Video Course</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs - HTML</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools - HTML</a></li>
+      </ul>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 3
+      HTML Elements and How the Browser Renders Them
+      This section explains the concept of tags and elements, and how browsers interpret them
+      -->
+
+      <h2>🌐 HTML Elements & How the Browser Renders Them</h2>
+
+      <p>
+        HTML is made up of <strong>elements</strong> — which are defined using <strong>tags</strong>.  
+        Tags tell the browser how to display the content between them.
+      </p>
+
+      <h3>📦 Example of an Element:</h3>
+      <pre><code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code></pre>
+
+      <p>
+        In this example:
+        <ul>
+          <li><code>&lt;p&gt;</code> is the opening tag</li>
+          <li><code>This is a paragraph</code> is the content</li>
+          <li><code>&lt;/p&gt;</code> is the closing tag</li>
+        </ul>
+      </p>
+
+      <h3>🔁 Nesting Elements</h3>
+      <p>
+        HTML elements can be nested inside each other. For example:
+      </p>
+
+      <pre><code>
+      &lt;div&gt;
+        &lt;h2&gt;Title&lt;/h2&gt;
+        &lt;p&gt;Some text here.&lt;/p&gt;
+      &lt;/div&gt;
+      </code></pre>
+
+      <h3>👁️ Browser Behavior</h3>
+      <ul>
+        <li>Browsers ignore extra white space and line breaks between elements.</li>
+        <li>HTML is <strong>not case-sensitive</strong> — but lowercase is recommended.</li>
+        <li>Browsers build a DOM (Document Object Model) tree based on elements.</li>
+      </ul>
+
+      <h3>✅ Best Practices:</h3>
+      <ul>
+        <li>Always use lowercase tags: <code>&lt;body&gt;</code> not <code>&lt;BODY&gt;</code></li>
+        <li>Indent nested tags for better readability</li>
+        <li>Close all tags properly</li>
+      </ul>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 4
+      Head, Body, and Nested Elements
+      -->
+
+      <h2>🧱 The &lt;head&gt;, &lt;body&gt;, and Nested Elements</h2>
+
+      <p>
+        Every HTML page consists of two main sections:
+      </p>
+
+      <ul>
+        <li><strong>&lt;head&gt;</strong>: Contains metadata, title, links to styles, fonts, and scripts. It’s not visible in the browser window.</li>
+        <li><strong>&lt;body&gt;</strong>: Contains all the visible content of the webpage (text, images, links, etc.).</li>
+      </ul>
+
+      <h3>🧩 Example HTML Structure:</h3>
+
+      <pre><code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="en"&gt;
+        &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;title&gt;My Webpage&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;Welcome!&lt;/h1&gt;
+          &lt;p&gt;This is a simple HTML structure.&lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+      </code></pre>
+
+      <h3>🔁 Nesting Tags Properly</h3>
+      <ul>
+        <li>Tags must be properly nested and closed in the correct order.</li>
+        <li><strong>Incorrect:</strong> <code>&lt;p&gt;&lt;strong&gt;Bold&lt;/p&gt;&lt;/strong&gt;</code></li>
+        <li><strong>Correct:</strong> <code>&lt;p&gt;&lt;strong&gt;Bold&lt;/strong&gt;&lt;/p&gt;</code></li>
+      </ul>
+
+      <h3>🧠 Browser Rendering Flow</h3>
+      <ul>
+        <li>The browser starts parsing from the top: it sees <code>&lt;!DOCTYPE html&gt;</code> and enters Standards Mode.</li>
+        <li>It reads <code>&lt;html&gt;</code>, then <code>&lt;head&gt;</code> for settings, then finally renders the <code>&lt;body&gt;</code>.</li>
+      </ul>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 5
+      Headings - h1 to h6 and Use Cases
+      -->
+
+      <h2>🔠 Headings and Use Cases</h2>
+
+      <p>
+        Headings help structure your content semantically. They also help search engines and screen readers understand your page hierarchy.
+      </p>
+
+      <h3>📚 Six Levels of Headings:</h3>
+      <ul>
+        <li><code>&lt;h1&gt;</code> – Main title (used only once per page)</li>
+        <li><code>&lt;h2&gt;</code> – Section title</li>
+        <li><code>&lt;h3&gt;</code> – Subsection under h2</li>
+        <li><code>&lt;h4&gt;</code> – Sub-subsection</li>
+        <li><code>&lt;h5&gt;</code> – Very detailed section title</li>
+        <li><code>&lt;h6&gt;</code> – The smallest and least used heading</li>
+      </ul>
+
+      <h3>✅ Best Practices:</h3>
+      <ul>
+        <li>Use only one <code>&lt;h1&gt;</code> per page (represents the main topic)</li>
+        <li>Do not skip levels (e.g., avoid <code>&lt;h1&gt;</code> → <code>&lt;h4&gt;</code>)</li>
+        <li>Use headings in order to create a meaningful structure</li>
+      </ul>
+
+      <h3>📦 Example:</h3>
+      <pre><code>
+      &lt;h1&gt;HTML Reference Guide&lt;/h1&gt;
+        &lt;h2&gt;Introduction&lt;/h2&gt;
+          &lt;h3&gt;What is HTML?&lt;/h3&gt;
+        &lt;h2&gt;Main Topics&lt;/h2&gt;
+          &lt;h3&gt;Elements&lt;/h3&gt;
+          &lt;h3&gt;Attributes&lt;/h3&gt;
+      </code></pre>
+
+      <h3>🎯 Tip:</h3>
+      <p>
+        Search engines use <code>&lt;h1&gt;</code> to <code>&lt;h3&gt;</code> to index the main sections of your site.
+      </p>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 6
+      Syntax Rules, Validation, and Testing Tools
+      -->
+
+      <h2>🧪 Syntax Rules & Validation</h2>
+
+      <p>
+        Writing correct HTML syntax helps ensure that all browsers interpret your page consistently and without errors.
+      </p>
+
+      <h3>📐 Syntax Rules:</h3>
+      <ul>
+        <li>Tags should always be enclosed in angle brackets: <code>&lt;tag&gt;</code></li>
+        <li>Most elements require an opening and closing tag: <code>&lt;p&gt;...&lt;/p&gt;</code></li>
+        <li>Self-closing tags end with a slash: <code>&lt;br /&gt;</code>, <code>&lt;img /&gt;</code></li>
+        <li>Attributes go inside the opening tag: <code>&lt;a href="https://example.com"&gt;</code></li>
+        <li>Attribute values should be in double quotes: <code>"value"</code></li>
+      </ul>
+
+      <h3>✅ Valid Example:</h3>
+      <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit&lt;/a&gt;</code></pre>
+
+      <h3>❌ Invalid Example:</h3>
+      <pre><code>&lt;a href=https://example.com&gt;Visit&lt;/a&gt;</code></pre>
+
+      <h3>🧪 Testing & Validation Tools:</h3>
+      <ul>
+        <li><a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a></li>
+        <li><a href="https://htmlhint.com/" target="_blank">HTMLHint</a> – Linter for your HTML code</li>
+        <li>Use browser developer tools (F12) to inspect and debug HTML structure</li>
+      </ul>
+
+      <h3>🧠 Tip:</h3>
+      <p>
+        Use a code editor like Visual Studio Code with HTML extensions to get real-time validation and autocomplete.
+      </p>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 7
+      Paragraph Element - <p>
+      -->
+
+      <h2>📄 The &lt;p&gt; Element</h2>
+
+      <p>
+        The <code>&lt;p&gt;</code> tag defines a paragraph of text. It is a block-level element that adds vertical spacing before and after the content.
+      </p>
+
+      <h3>🎯 Use Cases:</h3>
+      <ul>
+        <li>Organize text into readable sections</li>
+        <li>Separate thoughts or ideas in content</li>
+        <li>Used inside other block elements like <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;div&gt;</code></li>
+      </ul>
+
+      <h3>✅ Example:</h3>
+      <pre><code>&lt;p&gt;This is a simple paragraph in HTML.&lt;/p&gt;</code></pre>
+
+      <h3>🧠 Behavior Notes:</h3>
+      <ul>
+        <li>Browsers automatically add margin above and below each paragraph</li>
+        <li>It can contain inline elements like <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;a&gt;</code></li>
+      </ul>
+
+      <h3>🔗 Example with inline formatting:</h3>
+      <pre><code>&lt;p&gt;
+        This is a &lt;strong&gt;bold&lt;/strong&gt; word and this is an &lt;em&gt;italic&lt;/em&gt; one.
+      &lt;/p&gt;</code></pre>
+
+      <h3>🚫 Don't Do This:</h3>
+      <pre><code>&lt;p&gt;Paragraph 1&lt;/p&gt; &lt;p&gt;Paragraph 2&lt;/p&gt;</code></pre>
+      <p>✳️ Don't nest <code>&lt;p&gt;</code> inside another <code>&lt;p&gt;</code>; that is invalid HTML.</p>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 8
+      Element Attributes - Global and Specific
+      -->
+
+      <h2>🏷️ HTML Attributes</h2>
+
+      <p>
+        Attributes provide additional information about HTML elements. They're always written in the opening tag as <code>name="value"</code> pairs.
+      </p>
+
+      <h3>📌 Syntax:</h3>
+      <pre><code>&lt;element attribute="value"&gt;Content&lt;/element&gt;</code></pre>
+
+      <h3>🔹 Example:</h3>
+      <pre><code>&lt;img src="image.jpg" alt="A sample image" width="300" /&gt;</code></pre>
+
+      <h3>🧩 Global Attributes (can be used on most elements):</h3>
+      <ul>
+        <li><code>id</code>: Unique identifier</li>
+        <li><code>class</code>: Used for styling with CSS or JS targeting</li>
+        <li><code>style</code>: Inline styling</li>
+        <li><code>title</code>: Tooltip on hover</li>
+        <li><code>hidden</code>: Hides the element</li>
+        <li><code>tabindex</code>: Controls tab order</li>
+        <li><code>accesskey</code>: Sets a keyboard shortcut</li>
+        <li><code>draggable</code>: Allows dragging</li>
+      </ul>
+
+      <h3>💡 Example with multiple attributes:</h3>
+      <pre><code>&lt;p id="intro" class="lead" title="Hover text"&gt;
+        Welcome to HTML attributes.
+      &lt;/p&gt;</code></pre>
+
+      <h3>🛠️ Specific Attributes (for certain elements):</h3>
+      <ul>
+        <li><code>href</code> – for <code>&lt;a&gt;</code></li>
+        <li><code>src</code>, <code>alt</code>, <code>width</code> – for <code>&lt;img&gt;</code></li>
+        <li><code>type</code>, <code>value</code>, <code>placeholder</code> – for <code>&lt;input&gt;</code></li>
+      </ul>
+
+      <h3>🔐 Boolean Attributes:</h3>
+      <p>
+        These attributes don’t need a value. If present, they're treated as true.
+      </p>
+      <pre><code>&lt;input type="checkbox" checked /&gt;
+      &lt;input type="text" disabled /&gt;</code></pre>
+
+      <h3>🎯 Tips:</h3>
+      <ul>
+        <li>Always wrap attribute values in double quotes</li>
+        <li>Use lowercase for attribute names</li>
+        <li>Don’t duplicate attributes on the same element</li>
+      </ul>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 9
+      Text Formatting Elements
+      -->
+
+      <h2>🎨 Text Formatting Elements</h2>
+
+      <p>
+        HTML provides several inline elements that help format and style text without using CSS. These tags describe the meaning or importance of the content.
+      </p>
+
+      <h3>🧩 Common Formatting Tags:</h3>
+      <ul>
+        <li><code>&lt;strong&gt;</code> – Important text (usually bold)</li>
+        <li><code>&lt;em&gt;</code> – Emphasized text (usually italic)</li>
+        <li><code>&lt;b&gt;</code> – Bold (without semantic meaning)</li>
+        <li><code>&lt;i&gt;</code> – Italic (without semantic meaning)</li>
+        <li><code>&lt;mark&gt;</code> – Highlighted text</li>
+        <li><code>&lt;small&gt;</code> – Smaller text</li>
+        <li><code>&lt;del&gt;</code> – Deleted text (strikethrough)</li>
+        <li><code>&lt;ins&gt;</code> – Inserted text (usually underlined)</li>
+        <li><code>&lt;sub&gt;</code> – Subscript (e.g. H<sub>2</sub>O)</li>
+        <li><code>&lt;sup&gt;</code> – Superscript (e.g. x<sup>2</sup>)</li>
+      </ul>
+
+      <h3>✅ Examples:</h3>
+
+      <pre><code>&lt;p&gt;This is &lt;strong&gt;important&lt;/strong&gt; information.&lt;/p&gt;
+      &lt;p&gt;This is &lt;em&gt;emphasized&lt;/em&gt; content.&lt;/p&gt;
+      &lt;p&gt;Price: &lt;del&gt;$50&lt;/del&gt; &lt;ins&gt;$30&lt;/ins&gt;&lt;/p&gt;
+      &lt;p&gt;Water formula: H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+      &lt;p&gt;Math: x&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;mark&gt;Highlighted&lt;/mark&gt; word&lt;/p&gt;
+      </code></pre>
+
+      <h3>🧠 Notes:</h3>
+      <ul>
+        <li><code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> are better for accessibility than <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code></li>
+        <li>Use <code>&lt;mark&gt;</code> to highlight search terms</li>
+        <li><code>&lt;del&gt;</code> and <code>&lt;ins&gt;</code> are useful in content edits and versioning</li>
+      </ul>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 10
+      Anchor Tag <a> - Links & Navigation
+      -->
+
+      <h2>🔗 Links and the &lt;a&gt; Tag</h2>
+
+      <p>
+        The <code>&lt;a&gt;</code> (anchor) tag is used to create hyperlinks that navigate users to other pages, files, sections, or websites.
+      </p>
+
+      <h3>🔹 Basic Syntax:</h3>
+      <pre><code>&lt;a href="URL"&gt;Link Text&lt;/a&gt;</code></pre>
+
+      <h3>🌍 Example (External Link):</h3>
+      <pre><code>&lt;a href="https://www.google.com"&gt;Go to Google&lt;/a&gt;</code></pre>
+
+      <h3>📂 Example (Internal Link to Another Page):</h3>
+      <pre><code>&lt;a href="about.html"&gt;About Us&lt;/a&gt;</code></pre>
+
+      <h3>📌 Anchor Tag Attributes:</h3>
+      <ul>
+        <li><code>href</code>: Required. Specifies the destination URL.</li>
+        <li><code>target</code>: Where to open the link:
+          <ul>
+            <li><code>_self</code>: Default, opens in the same tab</li>
+            <li><code>_blank</code>: Opens in a new tab 🔗</li>
+          </ul>
+        </li>
+        <li><code>title</code>: Tooltip text on hover</li>
+        <li><code>download</code>: Initiates file download</li>
+      </ul>
+
+      <h3>🧩 Example with `target="_blank"` and title:</h3>
+      <pre><code>&lt;a href="https://developer.mozilla.org" target="_blank" title="MDN Docs"&gt;MDN&lt;/a&gt;</code></pre>
+
+      <h3>📍 Internal Section Link (Page Navigation):</h3>
+      <pre><code>
+      &lt;a href="#section2"&gt;Jump to Section 2&lt;/a&gt;
+
+      ...
+
+      &lt;h2 id="section2"&gt;Section 2&lt;/h2&gt;
+      </code></pre>
+
+      <h3>💾 Download File Link:</h3>
+      <pre><code>&lt;a href="files/manual.pdf" download&gt;Download Manual&lt;/a&gt;</code></pre>
+
+      <h3>🔐 Email Link (mailto:):</h3>
+      <pre><code>&lt;a href="mailto:example@email.com"&gt;Send Email&lt;/a&gt;</code></pre>
+
+      <h3>📞 Phone Link (tel:):</h3>
+      <pre><code>&lt;a href="tel:+201001234567"&gt;Call Us&lt;/a&gt;</code></pre>
+
+      <h3>⚠️ Accessibility Tip:</h3>
+      <p>Make link text meaningful like <code>Visit our contact page</code> instead of just <code>Click here</code>.</p>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 11
+      Image Tag <img> – Usage & Path Types
+      -->
+
+      <h2>🖼️ Images and the &lt;img&gt; Tag</h2>
+
+      <p>
+        The <code>&lt;img&gt;</code> tag is used to display images in a webpage. It's a <strong>self-closing</strong> tag and must include the <code>src</code> and <code>alt</code> attributes.
+      </p>
+
+      <h3>🔹 Syntax:</h3>
+      <pre><code>&lt;img src="image.jpg" alt="Description of the image" /&gt;</code></pre>
+
+      <h3>📍 Required Attributes:</h3>
+      <ul>
+        <li><code>src</code> – Path to the image file (relative or absolute)</li>
+        <li><code>alt</code> – Descriptive text for screen readers or when the image fails to load</li>
+      </ul>
+
+      <h3>📁 Path Types:</h3>
+      <ul>
+        <li><strong>Relative Path</strong>: Refers to a file in the same project folder  
+          <br><code>src="images/pic.jpg"</code>
+        </li>
+        <li><strong>Absolute Path</strong>: Full URL or full local path  
+          <br><code>src="https://example.com/images/pic.jpg"</code>
+        </li>
+      </ul>
+
+      <h3>📷 Example 1: Internal Image</h3>
+      <pre><code>&lt;img src="logo.png" alt="Website Logo" width="200" /&gt;</code></pre>
+
+      <h3>🌍 Example 2: External Image</h3>
+      <pre><code>&lt;img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" width="100" /&gt;</code></pre>
+
+      <h3>⚠️ Best Practices:</h3>
+      <ul>
+        <li>Use descriptive and meaningful <code>alt</code> text for accessibility.</li>
+        <li>Use optimized image formats like <code>.webp</code> or compressed <code>.jpg/.png</code>.</li>
+        <li>Avoid using images with large file sizes to maintain fast loading speed.</li>
+        <li>Add <code>width</code> or <code>height</code> to control display size.</li>
+      </ul>
+
+      <h3>🧠 Tips:</h3>
+      <ul>
+        <li>If the image is for decoration only, you can leave <code>alt=""</code> empty.</li>
+        <li>For logos, always describe the brand or logo name in <code>alt</code>.</li>
+      </ul>
+
+      <h3>🛑 Common Mistake:</h3>
+      <pre><code>&lt;img&gt; ← Missing "src" and "alt"</code></pre>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 12
+      HTML Lists – Unordered, Ordered, and Description Lists
+      -->
+
+      <h2>📝 Lists in HTML</h2>
+
+      <p>
+        HTML offers three main types of lists to organize and display grouped items:
+      </p>
+
+      <h3>1️⃣ Unordered List - <code>&lt;ul&gt;</code></h3>
+      <p>Displays items with bullets. Use when order doesn’t matter.</p>
+
+      <pre><code>&lt;ul&gt;
+        &lt;li&gt;HTML&lt;/li&gt;
+        &lt;li&gt;CSS&lt;/li&gt;
+        &lt;li&gt;JavaScript&lt;/li&gt;
+      &lt;/ul&gt;</code></pre>
+
+      <h3>2️⃣ Ordered List - <code>&lt;ol&gt;</code></h3>
+      <p>Displays items with numbers. Use when the order is important.</p>
+
+      <pre><code>&lt;ol&gt;
+        &lt;li&gt;Wake up&lt;/li&gt;
+        &lt;li&gt;Brush teeth&lt;/li&gt;
+        &lt;li&gt;Start coding&lt;/li&gt;
+      &lt;/ol&gt;</code></pre>
+
+      <h4>🔸 Type Attribute (for &lt;ol&gt;):</h4>
+      <ul>
+        <li><code>type="1"</code> – 1, 2, 3… (default)</li>
+        <li><code>type="A"</code> – A, B, C…</li>
+        <li><code>type="a"</code> – a, b, c…</li>
+        <li><code>type="I"</code> – I, II, III…</li>
+        <li><code>type="i"</code> – i, ii, iii…</li>
+      </ul>
+
+      <pre><code>&lt;ol type="A"&gt;
+        &lt;li&gt;Step A&lt;/li&gt;
+        &lt;li&gt;Step B&lt;/li&gt;
+      &lt;/ol&gt;</code></pre>
+
+      <h3>3️⃣ Description List - <code>&lt;dl&gt;</code></h3>
+      <p>Used to pair terms and their descriptions.</p>
+
+      <pre><code>&lt;dl&gt;
+        &lt;dt&gt;HTML&lt;/dt&gt;
+        &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+        &lt;dt&gt;CSS&lt;/dt&gt;
+        &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+      &lt;/dl&gt;</code></pre>
+
+      <h3>🔁 Nested Lists:</h3>
+      <pre><code>&lt;ul&gt;
+        &lt;li&gt;Frontend
+          &lt;ul&gt;
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Backend&lt;/li&gt;
+      &lt;/ul&gt;</code></pre>
+
+      <h3>✅ Best Practices:</h3>
+      <ul>
+        <li>Use semantic list types for proper structure</li>
+        <li>Use nested lists only when necessary</li>
+        <li>Never mix text and lists on the same level without using <code>&lt;li&gt;</code></li>
+      </ul>
+
+      <h3>🧠 Accessibility Tip:</h3>
+      <p>Screen readers rely on correct list structures to communicate grouped content clearly.</p>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 13
+      HTML Tables – Structure and Usage
+      -->
+
+      <h2>📊 Tables in HTML</h2>
+
+      <p>
+        Tables are used to organize and display tabular data using rows and columns.
+      </p>
+
+      <h3>📐 Table Structure:</h3>
+      <pre><code>&lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Age&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Alice&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Bob&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;</code></pre>
+
+      <h3>🔹 Tags Overview:</h3>
+      <ul>
+        <li><code>&lt;table&gt;</code> – The entire table container</li>
+        <li><code>&lt;thead&gt;</code> – Header section of the table</li>
+        <li><code>&lt;tbody&gt;</code> – Body section containing data rows</li>
+        <li><code>&lt;tfoot&gt;</code> – Footer section (optional)</li>
+        <li><code>&lt;tr&gt;</code> – Table row</li>
+        <li><code>&lt;th&gt;</code> – Table header cell (bold, centered by default)</li>
+        <li><code>&lt;td&gt;</code> – Table data cell</li>
+      </ul>
+
+      <h3>🎨 Adding Borders (CSS Example):</h3>
+      <pre><code>&lt;style&gt;
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        th, td {
+          border: 1px solid #ccc;
+          padding: 10px;
+        }
+        thead {
+          background-color: #eee;
+        }
+      &lt;/style&gt;</code></pre>
+
+      <h3>📌 Example with Styling:</h3>
+      <pre><code>&lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Language&lt;/th&gt;
+            &lt;th&gt;Year Created&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;HTML&lt;/td&gt;
+            &lt;td&gt;1993&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;CSS&lt;/td&gt;
+            &lt;td&gt;1996&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;</code></pre>
+
+      <h3>➕ Optional Attributes:</h3>
+      <ul>
+        <li><code>colspan</code> – Merge cells across columns</li>
+        <li><code>rowspan</code> – Merge cells across rows</li>
+      </ul>
+
+      <pre><code>&lt;td colspan="2"&gt;Merged Cell&lt;/td&gt;</code></pre>
+
+      <h3>✅ Best Practices:</h3>
+      <ul>
+        <li>Use <code>&lt;thead&gt;</code> and <code>&lt;th&gt;</code> for semantic clarity</li>
+        <li>Use CSS for styling (avoid HTML <code>border</code> attribute)</li>
+        <li>Add <code>scope="col"</code> or <code>scope="row"</code> for accessibility</li>
+      </ul>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 14
+      HTML Span, Break, and Horizontal Rule Elements
+      -->
+
+      <h2>🧩 Span, Break, and Horizontal Rule</h2>
+
+      <h3>🔹 1. <code>&lt;span&gt;</code> – Inline Container</h3>
+      <p>
+        The <code>&lt;span&gt;</code> tag is an inline element used to apply styles or scripts to a part of text.
+      </p>
+
+      <pre><code>&lt;p&gt;
+        This is a &lt;span style="color: red;"&gt;highlighted&lt;/span&gt; word.
+      &lt;/p&gt;</code></pre>
+
+      <ul>
+        <li>🧠 Used with CSS or JavaScript to target specific words.</li>
+        <li>Does not add any visual change by default.</li>
+      </ul>
+
+      ---
+
+      <h3>🔹 2. <code>&lt;br&gt;</code> – Line Break</h3>
+      <p>
+        The <code>&lt;br&gt;</code> tag creates a single line break. It's a self-closing tag.
+      </p>
+
+      <pre><code>&lt;p&gt;Line one&lt;br&gt;Line two&lt;/p&gt;</code></pre>
+
+      <ul>
+        <li>✅ Use inside paragraphs or text when you need a manual line break.</li>
+        <li>⚠️ Do <strong>not</strong> use multiple <code>&lt;br&gt;</code> tags for spacing — use CSS instead.</li>
+      </ul>
+
+      ---
+
+      <h3>🔹 3. <code>&lt;hr&gt;</code> – Horizontal Rule</h3>
+      <p>
+        The <code>&lt;hr&gt;</code> tag creates a horizontal line and separates content. It’s also a self-closing tag.
+      </p>
+
+      <pre><code>&lt;h2&gt;Section 1&lt;/h2&gt;
+      &lt;p&gt;Some content&lt;/p&gt;
+      &lt;hr&gt;
+      &lt;h2&gt;Section 2&lt;/h2&gt;
+      &lt;p&gt;More content&lt;/p&gt;</code></pre>
+
+      <ul>
+        <li>Used to indicate thematic breaks or section changes.</li>
+        <li>Can be styled with CSS to change its appearance.</li>
+      </ul>
+
+      <pre><code>&lt;style&gt;
+        hr {
+          border: none;
+          height: 2px;
+          background-color: #888;
+          margin: 2em 0;
+        }
+      &lt;/style&gt;</code></pre>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 15
+      HTML <div> – The Block-Level Container
+      -->
+
+      <h2>📦 Using &lt;div&gt; to Organize Layout</h2>
+
+      <p>
+        The <code>&lt;div&gt;</code> (short for "division") is a block-level container used to group related elements together.
+      </p>
+
+      <pre><code>&lt;div&gt;
+        &lt;h3&gt;User Profile&lt;/h3&gt;
+        &lt;p&gt;Name: Alice&lt;/p&gt;
+        &lt;p&gt;Age: 25&lt;/p&gt;
+      &lt;/div&gt;</code></pre>
+
+      <h3>🔹 Why Use `<div>`?</h3>
+      <ul>
+        <li>✅ Structure your HTML layout</li>
+        <li>✅ Apply CSS styles to entire sections</li>
+        <li>✅ Add JavaScript interactivity</li>
+      </ul>
+
+      <h3>🎨 CSS Example with `class`:</h3>
+      <pre><code>&lt;style&gt;
+        .card {
+          border: 1px solid #ccc;
+          padding: 15px;
+          margin-bottom: 20px;
+          border-radius: 8px;
+          background-color: #f9f9f9;
+        }
+      &lt;/style&gt;
+
+      &lt;div class="card"&gt;
+        &lt;h4&gt;Article Title&lt;/h4&gt;
+        &lt;p&gt;Some description here...&lt;/p&gt;
+      &lt;/div&gt;</code></pre>
+
+      <h3>🧠 Best Practices:</h3>
+      <ul>
+        <li>Use <code>&lt;div&gt;</code> when no semantic tag is available.</li>
+        <li>Add <code>class</code> or <code>id</code> to apply styles or behaviors.</li>
+        <li>Too many divs can create “div soup” — prefer semantic tags when possible.</li>
+      </ul>
+
+      <h3>📌 Example: Layout with Divs</h3>
+      <pre><code>&lt;div class="header"&gt;Header Section&lt;/div&gt;
+      &lt;div class="main"&gt;Main Content&lt;/div&gt;
+      &lt;div class="footer"&gt;Footer Section&lt;/div&gt;</code></pre>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 16
+      HTML Entities – Special Characters and Reserved Symbols
+      -->
+
+      <h2>🔣 HTML Entities</h2>
+
+      <p>
+        HTML entities are used to display reserved characters (like <code>&lt;</code> or <code>&amp;</code>) or special symbols (like © or €).
+      </p>
+
+      <h3>🔹 Why Use Entities?</h3>
+      <ul>
+        <li>Some characters are reserved in HTML, like <code>&lt;</code> and <code>&gt;</code>.</li>
+        <li>Entities let you show characters that would otherwise be treated as code.</li>
+        <li>You can also insert invisible characters (e.g., spaces) or non-keyboard symbols.</li>
+      </ul>
+
+      <h3>🔸 Common Entities:</h3>
+
+      <table border="1" cellpadding="6">
+        <thead>
+          <tr>
+            <th>Character</th>
+            <th>Entity</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><</td>
+            <td><code>&amp;lt;</code></td>
+            <td>Less than</td>
+          </tr>
+          <tr>
+            <td>></td>
+            <td><code>&amp;gt;</code></td>
+            <td>Greater than</td>
+          </tr>
+          <tr>
+            <td>&</td>
+            <td><code>&amp;amp;</code></td>
+            <td>Ampersand</td>
+          </tr>
+          <tr>
+            <td>"</td>
+            <td><code>&amp;quot;</code></td>
+            <td>Double Quote</td>
+          </tr>
+          <tr>
+            <td>'</td>
+            <td><code>&amp;apos;</code></td>
+            <td>Single Quote (not in HTML4)</td>
+          </tr>
+          <tr>
+            <td>©</td>
+            <td><code>&amp;copy;</code></td>
+            <td>Copyright Symbol</td>
+          </tr>
+          <tr>
+            <td>€</td>
+            <td><code>&amp;euro;</code></td>
+            <td>Euro Sign</td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td><code>&amp;nbsp;</code></td>
+            <td>Non-breaking Space</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>🧪 Example:</h3>
+      <pre><code>&lt;p&gt;5 &amp;lt; 10 is a valid math expression.&lt;/p&gt;
+      &lt;p&gt;Use &amp;copy; 2025 for copyright notice.&lt;/p&gt;
+      &lt;p&gt;Multiple &amp;nbsp;&amp;nbsp;&amp;nbsp; spaces&lt;/p&gt;</code></pre>
+
+      <p>🔍 Output:</p>
+      <p>5 &lt; 10 is a valid math expression.</p>
+      <p>Use © 2025 for copyright notice.</p>
+      <p>Multiple    spaces</p>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 17
+      Semantic HTML Elements – Giving Meaning to Structure
+      -->
+
+      <h2>🏗️ Semantic HTML Elements</h2>
+
+      <p>
+        Semantic elements clearly describe their meaning to both the browser and developers.
+      </p>
+
+      <h3>🔹 Why Use Semantic Tags?</h3>
+      <ul>
+        <li>✅ Improve readability and code structure</li>
+        <li>✅ Help search engines understand your content (SEO)</li>
+        <li>✅ Support accessibility tools like screen readers</li>
+      </ul>
+
+      <h3>🔸 Common Semantic Tags:</h3>
+      <ul>
+        <li><code>&lt;header&gt;</code>: Top section (logo, nav, etc.)</li>
+        <li><code>&lt;nav&gt;</code>: Navigation links</li>
+        <li><code>&lt;main&gt;</code>: Main content area</li>
+        <li><code>&lt;section&gt;</code>: Logical sections or topics</li>
+        <li><code>&lt;article&gt;</code>: Independent, self-contained content (e.g., blog post)</li>
+        <li><code>&lt;aside&gt;</code>: Sidebar or related content</li>
+        <li><code>&lt;footer&gt;</code>: Bottom section (copyright, contact)</li>
+      </ul>
+
+      <h3>📌 Example Layout:</h3>
+      <pre><code>&lt;header&gt;
+        &lt;h1&gt;My Website&lt;/h1&gt;
+        &lt;nav&gt;
+          &lt;a href="#"&gt;Home&lt;/a&gt;
+          &lt;a href="#"&gt;Blog&lt;/a&gt;
+          &lt;a href="#"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+      &lt;/header&gt;
+
+      &lt;main&gt;
+        &lt;section&gt;
+          &lt;h2&gt;About Us&lt;/h2&gt;
+          &lt;p&gt;We build modern websites.&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;article&gt;
+          &lt;h2&gt;Latest News&lt;/h2&gt;
+          &lt;p&gt;HTML6 coming soon!&lt;/p&gt;
+        &lt;/article&gt;
+
+        &lt;aside&gt;
+          &lt;p&gt;Subscribe to our newsletter&lt;/p&gt;
+        &lt;/aside&gt;
+      &lt;/main&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&copy; 2025 My Company&lt;/p&gt;
+      &lt;/footer&gt;</code></pre>
+
+      <h3>🧠 Best Practices:</h3>
+      <ul>
+        <li>Use semantic elements instead of generic <code>&lt;div&gt;</code> where applicable.</li>
+        <li>Don't use semantic tags just for styling — use them for structure and meaning.</li>
+      </ul>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 18
+      Page Layout Using <div> and CSS Classes
+      -->
+
+      <h2>📐 Layout with &lt;div&gt; and Classes</h2>
+
+      <p>
+        The <code>&lt;div&gt;</code> element is a generic container for grouping content. It has no semantic meaning, but it is extremely useful for layout and styling.
+      </p>
+
+      <h3>🔹 When to Use &lt;div&gt;</h3>
+      <ul>
+        <li>When semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, etc. are not appropriate.</li>
+        <li>To group elements logically and apply common styles using CSS classes or IDs.</li>
+        <li>To structure layouts (like grids, cards, columns, containers).</li>
+      </ul>
+
+      <h3>🔸 Example:</h3>
+      <pre><code>&lt;div class="container"&gt;
+        &lt;div class="card"&gt;
+          &lt;h3&gt;Card Title&lt;/h3&gt;
+          &lt;p&gt;Some descriptive text inside the card.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="card"&gt;
+          &lt;h3&gt;Another Card&lt;/h3&gt;
+          &lt;p&gt;More content here.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      </code></pre>
+
+      <h3>💅 Sample CSS (in &lt;style&gt; block):</h3>
+      <pre><code>/* This CSS goes inside the &lt;style&gt; tag in &lt;head&gt; */
+      .container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+      .card {
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 0 5px #ccc;
+      }
+      </code></pre>
+
+      <h3>🧠 Best Practices:</h3>
+      <ul>
+        <li>Use class names that describe the content or purpose, like <code>card</code>, <code>nav-container</code>, <code>hero-section</code>, etc.</li>
+        <li>Try to use semantic tags first, and fall back to <code>&lt;div&gt;</code> only when needed.</li>
+      </ul>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 19
+      Page Layout Using Semantic Elements (Instead of <div>)
+      -->
+
+      <h2>🏗️ Layout with Semantic HTML</h2>
+
+      <p>
+        Instead of using generic <code>&lt;div&gt;</code> tags everywhere, HTML5 introduced <strong>semantic tags</strong> that give meaning to different parts of a page.
+      </p>
+
+      <h3>🔹 Benefits of Semantic Layout:</h3>
+      <ul>
+        <li>Improved accessibility (screen readers understand content better)</li>
+        <li>Better SEO (search engines parse page meaning)</li>
+        <li>Easier to maintain and read</li>
+      </ul>
+
+      <h3>🔸 Common Layout Tags:</h3>
+      <ul>
+        <li><code>&lt;header&gt;</code> – Website or section header</li>
+        <li><code>&lt;nav&gt;</code> – Navigation menus</li>
+        <li><code>&lt;main&gt;</code> – Central content area</li>
+        <li><code>&lt;section&gt;</code> – Group of related content</li>
+        <li><code>&lt;article&gt;</code> – Independent piece of content (e.g. blog post)</li>
+        <li><code>&lt;aside&gt;</code> – Sidebar or secondary content</li>
+        <li><code>&lt;footer&gt;</code> – Bottom section of page or section</li>
+      </ul>
+
+      <h3>📐 Semantic Page Structure Example:</h3>
+      <pre><code>&lt;header&gt;
+        &lt;h1&gt;My Blog&lt;/h1&gt;
+        &lt;nav&gt;
+          &lt;a href="#"&gt;Home&lt;/a&gt;
+          &lt;a href="#"&gt;Posts&lt;/a&gt;
+          &lt;a href="#"&gt;About&lt;/a&gt;
+        &lt;/nav&gt;
+      &lt;/header&gt;
+
+      &lt;main&gt;
+        &lt;section&gt;
+          &lt;article&gt;
+            &lt;h2&gt;Post Title&lt;/h2&gt;
+            &lt;p&gt;Lorem ipsum content for the article.&lt;/p&gt;
+          &lt;/article&gt;
+
+          &lt;article&gt;
+            &lt;h2&gt;Second Post&lt;/h2&gt;
+            &lt;p&gt;Another piece of awesome content!&lt;/p&gt;
+          &lt;/article&gt;
+        &lt;/section&gt;
+
+        &lt;aside&gt;
+          &lt;h3&gt;About Me&lt;/h3&gt;
+          &lt;p&gt;Web developer & content creator.&lt;/p&gt;
+        &lt;/aside&gt;
+      &lt;/main&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&copy; 2025 My Blog. All rights reserved.&lt;/p&gt;
+      &lt;/footer&gt;
+      </code></pre>
+
+      <h3>💡 Tip:</h3>
+      <ul>
+        <li>You can use semantic tags together with classes and CSS just like you would with divs.</li>
+        <li>Keep your structure logical and consistent for better accessibility and maintenance.</li>
+      </ul>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 20
+      Audio Element - Embedding and Playing Sound Files
+      -->
+
+      <h2>🎵 The &lt;audio&gt; Element</h2>
+
+      <p>
+        The <code>&lt;audio&gt;</code> tag allows you to embed audio files like music, sound effects, or voiceovers into your web page.
+      </p>
+
+      <h3>🔹 Basic Syntax:</h3>
+      <pre><code>&lt;audio src="audio-file.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+
+      <h3>🔸 Common Attributes:</h3>
+      <ul>
+        <li><code>src</code>: Path to the audio file (MP3, OGG, WAV)</li>
+        <li><code>controls</code>: Displays play/pause, volume, etc.</li>
+        <li><code>autoplay</code>: Starts playing automatically (often blocked by browsers)</li>
+        <li><code>loop</code>: Repeats the audio continuously</li>
+        <li><code>muted</code>: Starts muted</li>
+      </ul>
+
+      <h3>🔸 Multiple Source Example (for browser compatibility):</h3>
+      <pre><code>&lt;audio controls&gt;
+        &lt;source src="audio.mp3" type="audio/mpeg" /&gt;
+        &lt;source src="audio.ogg" type="audio/ogg" /&gt;
+        Your browser does not support the audio tag.
+      &lt;/audio&gt;
+      </code></pre>
+
+      <h3>✅ Best Practices:</h3>
+      <ul>
+        <li>Include fallback text for unsupported browsers.</li>
+        <li>Use multiple formats (MP3, OGG) if needed for compatibility.</li>
+        <li>Do not autoplay audio unless necessary and silent.</li>
+      </ul>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 21
+      Video Element - Embedding and Displaying Videos
+      -->
+
+      <h2>🎬 The &lt;video&gt; Element</h2>
+
+      <p>
+        The <code>&lt;video&gt;</code> tag lets you embed videos into your web page. It's great for tutorials, backgrounds, or media content.
+      </p>
+
+      <h3>🔹 Basic Syntax:</h3>
+      <pre><code>&lt;video src="video.mp4" controls&gt;&lt;/video&gt;</code></pre>
+
+      <h3>🔸 Common Attributes:</h3>
+      <ul>
+        <li><code>src</code>: Path to the video file (MP4, WebM, OGG)</li>
+        <li><code>controls</code>: Shows play, pause, volume, etc.</li>
+        <li><code>autoplay</code>: Automatically plays on load (must be muted in many browsers)</li>
+        <li><code>loop</code>: Restarts automatically when finished</li>
+        <li><code>muted</code>: Starts with no sound</li>
+        <li><code>poster</code>: Image shown before the video starts</li>
+        <li><code>width</code> and <code>height</code>: Set dimensions</li>
+      </ul>
+
+      <h3>🔸 Example with Multiple Sources:</h3>
+      <pre><code>&lt;video controls width="400" poster="preview.jpg"&gt;
+        &lt;source src="video.mp4" type="video/mp4" /&gt;
+        &lt;source src="video.webm" type="video/webm" /&gt;
+        Your browser does not support the video tag.
+      &lt;/video&gt;
+      </code></pre>
+
+      <h3>🎯 Use Cases:</h3>
+      <ul>
+        <li>Tutorials</li>
+        <li>Marketing or product showcases</li>
+        <li>Background videos (with muted + autoplay)</li>
+      </ul>
+
+      <h3>💡 Best Practices:</h3>
+      <ul>
+        <li>Compress videos for faster load times.</li>
+        <li>Use the <code>poster</code> attribute to avoid blank screens.</li>
+        <li>Always provide controls unless the video is decorative.</li>
+      </ul>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 22 - PART 1
+      Forms - Building Interactive User Input
+      -->
+
+      <h2>🧾 Forms in HTML - Part 1</h2>
+
+      <p>
+        HTML forms are used to collect input from users. They’re essential for features like login, signup, search, surveys, and file uploads.
+      </p>
+
+      <h3>🔹 Basic Form Structure:</h3>
+      <pre><code>&lt;form action="submit.php" method="POST"&gt;
+        &lt;!-- form elements here --&gt;
+      &lt;/form&gt;
+      </code></pre>
+
+      <h3>🔸 Important Attributes:</h3>
+      <ul>
+        <li><code>action</code>: Where to send form data (URL or script)</li>
+        <li><code>method</code>: HTTP method (<code>GET</code> or <code>POST</code>)</li>
+        <li><code>name</code>: Identifier for the form</li>
+        <li><code>target</code>: Where to display the result (e.g. <code>_blank</code>)</li>
+        <li><code>novalidate</code>: Disables HTML5 validation</li>
+      </ul>
+
+      <h3>🔸 Example:</h3>
+      <pre><code>&lt;form action="/submit" method="POST"&gt;
+        &lt;label for="username"&gt;Username:&lt;/label&gt;
+        &lt;input type="text" id="username" name="username" required /&gt;
+        &lt;button type="submit"&gt;Send&lt;/button&gt;
+      &lt;/form&gt;
+      </code></pre>
+
+      <h3>📥 Input Types:</h3>
+      <p>Each <code>&lt;input&gt;</code> element can have different <strong>type</strong> depending on the kind of data you need:</p>
+      <ul>
+        <li><code>text</code>: Regular text</li>
+        <li><code>email</code>: Must be a valid email</li>
+        <li><code>password</code>: Obscured input</li>
+        <li><code>number</code>: Numeric input</li>
+        <li><code>range</code>: Slider for a numeric range</li>
+        <li><code>color</code>: Color picker</li>
+        <li><code>date</code>, <code>time</code>, <code>datetime-local</code></li>
+        <li><code>url</code>: Must be a valid link</li>
+        <li><code>search</code>: Styled search field</li>
+        <li><code>tel</code>: Telephone number</li>
+        <li><code>file</code>: Upload a file</li>
+        <li><code>hidden</code>: Hidden value</li>
+        <li><code>checkbox</code>: On/off toggle</li>
+        <li><code>radio</code>: Choose one from multiple</li>
+        <li><code>submit</code>, <code>reset</code>, <code>button</code></li>
+      </ul>
+
+      <h3>📌 Example with Various Inputs:</h3>
+      <pre><code>&lt;form&gt;
+        &lt;label&gt;Name:&lt;/label&gt;
+        &lt;input type="text" name="name" required /&gt;&lt;br /&gt;
+
+        &lt;label&gt;Age:&lt;/label&gt;
+        &lt;input type="number" name="age" /&gt;&lt;br /&gt;
+
+        &lt;label&gt;Email:&lt;/label&gt;
+        &lt;input type="email" name="email" required /&gt;&lt;br /&gt;
+
+        &lt;label&gt;Choose Color:&lt;/label&gt;
+        &lt;input type="color" name="favcolor" /&gt;&lt;br /&gt;
+
+        &lt;label&gt;Upload CV:&lt;/label&gt;
+        &lt;input type="file" name="cv" /&gt;&lt;br /&gt;
+
+        &lt;label&gt;Subscribe:&lt;/label&gt;
+        &lt;input type="checkbox" name="subscribe" /&gt;&lt;br /&gt;
+
+        &lt;button type="submit"&gt;Submit&lt;/button&gt;
+      &lt;/form&gt;
+      </code></pre>
+
+      <hr />
+      <!-- 
+      📘 HTML MASTER REFERENCE - SECTION 22 - PART 2
+      Forms - Inputs, Selects, Textarea, Attributes
+      -->
+
+      <h2>🧾 HTML Forms - Part 2</h2>
+
+      <h3>📝 Textarea (Multi-line Text Input)</h3>
+      <p>The <code>&lt;textarea&gt;</code> is used for large blocks of user input like comments or messages.</p>
+      <pre><code>&lt;textarea name="message" rows="5" cols="30"&gt;
+      Write here...
+      &lt;/textarea&gt;
+      </code></pre>
+
+      <h3>🔽 Select Menu (Dropdown)</h3>
+      <p>Use <code>&lt;select&gt;</code> with <code>&lt;option&gt;</code> to create dropdowns.</p>
+      <pre><code>&lt;label for="car"&gt;Choose a car:&lt;/label&gt;
+      &lt;select id="car" name="car"&gt;
+        &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+        &lt;option value="bmw"&gt;BMW&lt;/option&gt;
+        &lt;option value="audi"&gt;Audi&lt;/option&gt;
+      &lt;/select&gt;
+      </code></pre>
+
+      <h3>🎯 Radio Buttons</h3>
+      <p>Use the same <code>name</code> for a group to make them exclusive.</p>
+      <pre><code>
+      &lt;p&gt;Gender:&lt;/p&gt;
+      &lt;input type="radio" id="male" name="gender" value="male" /&gt;
+      &lt;label for="male"&gt;Male&lt;/label&gt;
+
+      &lt;input type="radio" id="female" name="gender" value="female" /&gt;
+      &lt;label for="female"&gt;Female&lt;/label&gt;
+      </code></pre>
+
+      <h3>✅ Checkboxes</h3>
+      <p>Each checkbox is independent.</p>
+      <pre><code>
+      &lt;p&gt;Skills:&lt;/p&gt;
+      &lt;input type="checkbox" id="html" name="skills" value="HTML" /&gt;
+      &lt;label for="html"&gt;HTML&lt;/label&gt;
+
+      &lt;input type="checkbox" id="css" name="skills" value="CSS" /&gt;
+      &lt;label for="css"&gt;CSS&lt;/label&gt;
+      </code></pre>
+
+      <h3>📋 Datalist (Auto-suggestions)</h3>
+      <pre><code>&lt;input list="browsers" name="browser" /&gt;
+      &lt;datalist id="browsers"&gt;
+        &lt;option value="Chrome" /&gt;
+        &lt;option value="Firefox" /&gt;
+        &lt;option value="Edge" /&gt;
+        &lt;option value="Safari" /&gt;
+      &lt;/datalist&gt;
+      </code></pre>
+
+      <h3>🔐 Special Attributes:</h3>
+      <ul>
+        <li><code>readonly</code>: Field cannot be modified</li>
+        <li><code>disabled</code>: Field is not editable or submitted</li>
+        <li><code>autofocus</code>: Auto-focus when page loads</li>
+        <li><code>placeholder</code>: Hint text in input field</li>
+        <li><code>required</code>: Must be filled out before submitting</li>
+        <li><code>value</code>: Default value</li>
+      </ul>
+
+      <h3>🔘 Reset & Submit Buttons</h3>
+      <pre><code>
+      &lt;input type="submit" value="Send" /&gt;
+      &lt;input type="reset" value="Reset" /&gt;
+      </code></pre>
+
+      <h3>📁 File Upload</h3>
+      <pre><code>
+      &lt;form action="/upload" method="post" enctype="multipart/form-data"&gt;
+        &lt;input type="file" name="resume" /&gt;
+        &lt;button type="submit"&gt;Upload&lt;/button&gt;
+      &lt;/form&gt;
+      </code></pre>
+
+      <h3>🕒 Time & Date Inputs</h3>
+      <pre><code>
+      &lt;input type="date" name="dob" /&gt;
+      &lt;input type="time" name="alarm" /&gt;
+      &lt;input type="datetime-local" name="meeting" /&gt;
+      </code></pre>
+
+      <h3>🔒 Hidden Input</h3>
+      <p>Used to store extra data sent with the form:</p>
+      <pre><code>&lt;input type="hidden" name="userId" value="12345" /&gt;</code></pre>
+
+      <hr />
+      <!-- ============================== -->
+      <!-- Section 23: <blockquote>, <wbr>, <bdi>, <button> -->
+      <!-- ============================== -->
+
+      <h2>📌 Special HTML Elements</h2>
+
+      <h3>🗨️ &lt;blockquote&gt;</h3>
+      <p>
+      Used for long quotations. It usually adds indentation to the text to visually indicate a quote.
+      </p>
+
+      <pre><code>&lt;blockquote cite="https://en.wikipedia.org/wiki/HTML"&gt;
+        HTML is the standard markup language for documents designed to be displayed in a web browser.
+      &lt;/blockquote&gt;
+      </code></pre>
+
+      <h4>📎 cite attribute</h4>
+      <p>
+      Specifies the source URL of the quotation.
+      </p>
+
+      <hr />
+
+      <h3>🔁 &lt;wbr&gt;</h3>
+      <p>
+      <code>&lt;wbr&gt;</code> stands for “word break opportunity”. It defines a spot where the browser may optionally break a line.
+      </p>
+
+      <p>Use it for long strings like URLs or emails to allow better wrapping:</p>
+
+      <pre><code>&lt;p&gt;
+        https://www.verylong&lt;wbr&gt;urlwithnobreak&lt;wbr&gt;available.com
+      &lt;/p&gt;
+      </code></pre>
+
+      <hr />
+
+      <h3>🌍 &lt;bdi&gt; (Bi-Directional Isolation)</h3>
+      <p>
+      Use <code>&lt;bdi&gt;</code> when you want to isolate part of the text with unknown direction (LTR or RTL).
+      </p>
+
+      <pre><code>&lt;p&gt;Usernames:
+        &lt;bdi&gt;جون&lt;/bdi&gt;
+        &lt;bdi&gt;James&lt;/bdi&gt;
+      &lt;/p&gt;
+      </code></pre>
+
+      <p>This prevents layout issues when mixing Arabic, English, or Hebrew content.</p>
+
+      <hr />
+
+      <h3>🔘 &lt;button&gt;</h3>
+      <p>
+      The <code>&lt;button&gt;</code> element creates a clickable button.
+      </p>
+
+      <h4>🔹 Types:</h4>
+      <ul>
+        <li><code>type="submit"</code>: Submits the form (default inside forms)</li>
+        <li><code>type="reset"</code>: Resets all form inputs</li>
+        <li><code>type="button"</code>: Regular button (used with JS)</li>
+      </ul>
+
+      <pre><code>&lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+      &lt;button type="reset"&gt;Reset All&lt;/button&gt;
+      &lt;button type="button" onclick="alert('Clicked!')"&gt;Click Me&lt;/button&gt;
+      </code></pre>
+
+      <p>You can also use icons and images inside buttons:</p>
+
+      <pre><code>&lt;button&gt;
+        &lt;img src="icon.png" width="16" /&gt; Download
+      &lt;/button&gt;
+      </code></pre>
+
+      <hr />
+      <!-- ========================== -->
+      <!-- Section 24: iframe, pre, code -->
+      <!-- ========================== -->
+
+      <h2>🧱 Embedding & Code Display Elements</h2>
+
+      <h3>🖼️ &lt;iframe&gt; (Inline Frame)</h3>
+      <p>
+      <code>&lt;iframe&gt;</code> is used to embed another webpage within the current page.
+      </p>
+
+      <pre><code>&lt;iframe src="https://www.example.com" width="500" height="300"&gt;&lt;/iframe&gt;
+      </code></pre>
+
+      <h4>🔐 Security Notes</h4>
+      <ul>
+        <li>Use <code>sandbox</code> to limit iframe capabilities</li>
+        <li>Use <code>loading="lazy"</code> to defer loading</li>
+      </ul>
+
+      <pre><code>&lt;iframe
+        src="https://elzero.org"
+        width="600"
+        height="300"
+        sandbox
+        loading="lazy"
+      &gt;&lt;/iframe&gt;
+      </code></pre>
+
+      <hr />
+
+      <h3>⏹️ &lt;pre&gt; (Preformatted Text)</h3>
+      <p>
+      <code>&lt;pre&gt;</code> preserves whitespace, line breaks, and formatting exactly as written in the HTML.
+      </p>
+
+      <pre><code>&lt;pre&gt;
+      Line 1
+        Line 2
+          Line 3
+      &lt;/pre&gt;
+      </code></pre>
+
+      <hr />
+
+      <h3>💻 &lt;code&gt; (Inline Code)</h3>
+      <p>
+      Used to display inline programming code or tags.
+      </p>
+
+      <pre><code>&lt;p&gt;Use the &lt;code&gt;&lt;img&gt;&lt;/code&gt; tag to add images.&lt;/p&gt;
+      </code></pre>
+
+      <h4>👯 Combine with &lt;pre&gt;</h4>
+      <p>
+      You can use <code>&lt;pre&gt;</code> + <code>&lt;code&gt;</code> to format blocks of code:
+      </p>
+
+      <pre><code>&lt;pre&gt;&lt;code&gt;
+      function greet() {
+        alert("Hello!");
+      }
+      greet();
+      &lt;/code&gt;&lt;/pre&gt;
+      </code></pre>
+
+      <hr />
+      <!-- ============================== -->
+      <!-- Section 25: Accessibility, ARIA, and Screen Readers -->
+      <!-- ============================== -->
+
+      <h2>♿ Accessibility & ARIA</h2>
+
+      <p>Accessibility means making websites usable for everyone, including people with disabilities.</p>
+
+      <h3>🔍 Why Accessibility Matters?</h3>
+      <ul>
+        <li>Helps screen readers interpret content correctly</li>
+        <li>Makes sites usable with keyboards (tab, enter, etc.)</li>
+        <li>Improves SEO and usability for all users</li>
+      </ul>
+
+      <hr />
+
+      <h3>🔖 Semantic HTML = Built-in Accessibility</h3>
+      <p>Use elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, etc. instead of <code>&lt;div&gt;</code> to give meaning to content.</p>
+
+      <h4>✅ Example:</h4>
+      <pre><code>&lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+      </code></pre>
+
+      <hr />
+
+      <h3>📚 ARIA (Accessible Rich Internet Applications)</h3>
+      <p>ARIA attributes help make non-semantic elements accessible (like buttons built from <code>&lt;div&gt;</code>).</p>
+
+      <h4>⚠️ Only use ARIA if there’s no native HTML alternative!</h4>
+
+      <h4>✅ Common ARIA Attributes:</h4>
+      <ul>
+        <li><code>role</code> – defines what the element is</li>
+        <li><code>aria-label</code> – adds a label for screen readers</li>
+        <li><code>aria-hidden="true"</code> – hides from screen readers</li>
+      </ul>
+
+      <h4>📌 Example:</h4>
+      <pre><code>&lt;div role="button" tabindex="0" aria-label="Open Menu"&gt;
+        ☰
+      &lt;/div&gt;
+      </code></pre>
+
+      <hr />
+
+      <h3>🧭 Keyboard Navigation</h3>
+      <p>Use <code>tabindex="0"</code> to make elements focusable by keyboard.</p>
+
+      <pre><code>&lt;div tabindex="0"&gt;I can be focused with the Tab key&lt;/div&gt;
+      </code></pre>
+
+      <hr />
+
+      <h3>🗣️ Screen Reader Text</h3>
+      <p>Use a visually hidden label for screen readers:</p>
+
+      <pre><code>&lt;style&gt;
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      &lt;/style&gt;
+
+      &lt;span class="visually-hidden"&gt;Accessible Text for screen readers&lt;/span&gt;
+      </code></pre>
+
+      <hr />
+      <!-- ============================== -->
+      <!-- Section 26: Final Notes & Resources -->
+      <!-- ============================== -->
+
+      <h2>📘 Final Notes & Learning Resources</h2>
+
+      <h3>📌 Summary of What You Learned</h3>
+      <ul>
+        <li>HTML Syntax and Structure</li>
+        <li>Tags and Elements: Headings, Paragraphs, Links, Images</li>
+        <li>Lists: Unordered, Ordered, and Description Lists</li>
+        <li>Tables: Structure and Styling Basics</li>
+        <li>Forms and Input Types</li>
+        <li>Semantic Elements and Layout</li>
+        <li>Accessibility and ARIA Attributes</li>
+        <li>Multimedia: Audio and Video Embedding</li>
+        <li>Special Elements: <code>&lt;iframe&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;bdi&gt;</code>, <code>&lt;wbr&gt;</code></li>
+      </ul>
+
+      <hr />
+
+      <h3>🌍 Top Learning Platforms</h3>
+
+      <ol>
+        <li>
+          <strong>MDN Web Docs (by Mozilla)</strong>  
+          <br />
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">https://developer.mozilla.org</a>
+          <br />
+          📖 Full documentation with examples and browser compatibility info.
+        </li>
+
+        <li>
+          <strong>W3Schools</strong>
+          <br />
+          <a href="https://www.w3schools.com/html/" target="_blank">https://www.w3schools.com/html</a>
+          <br />
+          💡 Interactive and beginner-friendly.
+        </li>
+
+        <li>
+          <strong>freeCodeCamp</strong>
+          <br />
+          <a href="https://www.freecodecamp.org/learn" target="_blank">https://www.freecodecamp.org/learn</a>
+          <br />
+          💪 Learn by building projects with hands-on coding.
+        </li>
+
+        <li>
+          <strong>Elzero Web School (Arabic)</strong>
+          <br />
+          <a href="https://elzero.org/study/html-2021-study-plan/" target="_blank">https://elzero.org</a>
+          <br />
+          📺 YouTube Series: <a href="https://www.youtube.com/playlist?list=PLDoPjvoNmBAw_t_XWUFbBX-c9MafPk9ji" target="_blank">HTML Course Playlist</a>
+        </li>
+      </ol>
+
+      <hr />
+
+      <h3>🚀 Next Steps After HTML</h3>
+      <ul>
+        <li>Learn CSS: Styling and layouts</li>
+        <li>Learn JavaScript: Interactivity and dynamic content</li>
+        <li>Explore Git & GitHub: Version control and collaboration</li>
+        <li>Build projects: Practice by making real websites</li>
+        <li>Understand Accessibility: Make your websites usable for everyone</li>
+      </ul>
+
+      <hr />
+
+      <h3>💬 Final Tip</h3>
+      <p>Practice daily. Build small projects. Explore code from others. Read docs. Join communities. Keep learning. 🌱</p>
+
+      <hr />
+
+      <p style="text-align:center; font-weight: bold; font-size: 18px;">🧡 Thank you for reading this HTML Reference! 🧡<br>Happy Coding!</p>
+  </body>
+</html>
